@@ -3,14 +3,14 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.uttesh</groupId>
     <artifactId>pdfngreport</artifactId>
-    <version>2.1.3</version>
+    <version>2.1.4</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.6</maven.compiler.source>
         <maven.compiler.target>1.6</maven.compiler.target>
     </properties>
-    
+
     <parent>
         <groupId>org.sonatype.oss</groupId>
         <artifactId>oss-parent</artifactId>
@@ -31,12 +31,23 @@
                 <picUrl>https://avatars1.githubusercontent.com/u/2218611</picUrl>
             </properties>
         </developer>
+        <developer>
+            <id>FabioIngrao</id>
+            <name>Fabio Ingrao</name>
+            <email>fabio.ingrao@gmail.com</email>
+            <url>https://www.grail.com</url>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+            <timezone>Americas/Los_Angeles</timezone>
+        </developer>
     </developers>
-    
+
     <name>pdfngreport</name>
     <description>Create the pdf report for the testng test cases execution results</description>
     <url>http://maven.apache.org</url>
-    
+
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -44,16 +55,16 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
-    
+
     <issueManagement>
         <system>GitHub Issue Tracker</system>
         <url>https://github.com/uttesh/pdfngreport/issues</url>
     </issueManagement>
-   
+
     <scm>
         <url>http://svn.apache.org/viewvc/maven</url>
     </scm>
-    
+
     <dependencies>
         <dependency>
             <groupId>jfree</groupId>
@@ -82,7 +93,7 @@
             <version>4.3.1</version>
         </dependency>
     </dependencies>
-    
+
     <build>
         <resources>
             <resource>
@@ -243,5 +254,5 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
         </repository>
     </distributionManagement>
-    
+
 </project>
