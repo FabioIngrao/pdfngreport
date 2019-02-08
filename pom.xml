@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.uttesh</groupId>
     <artifactId>pdfngreport</artifactId>
-    <version>2.1.4</version>
+    <version>2.1.5</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -40,7 +40,7 @@
                 <role>architect</role>
                 <role>developer</role>
             </roles>
-            <timezone>Americas/Los_Angeles</timezone>
+            <timezone>America/San Francisco</timezone>
         </developer>
     </developers>
 

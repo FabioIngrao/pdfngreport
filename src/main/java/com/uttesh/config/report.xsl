@@ -5,8 +5,8 @@
 	<xsl:strip-space elements="*" />
 	<xsl:template match="/">
 		<fo:root>
-                 
-                    
+
+
 			<fo:layout-master-set>
 				<fo:simple-page-master master-name="rest"
 					page-height="150mm" margin-left="3mm" margin-right="3mm"
@@ -27,7 +27,7 @@
 											font-family="Arial, Helvetica, Gyosho, Trado, sans-serif"
 											padding-top="1cm" font-size="18pt"
 											text-align="left"  margin-left="2mm">
-                                        
+
                                         <fo:block text-align="{ReportData/TitleAlign}" padding-top="5mm">
                                              <xsl:value-of select="ReportData/ReportTitle" text-align="center"/>
                                         </fo:block>
@@ -56,7 +56,7 @@
                                                 </xsl:otherwise>
                                             </xsl:choose>
                                         </fo:block>
-                                        
+
                                     </fo:block-container>
                                     <xsl:if test="(ReportData/Logo)='show'">
                                     <fo:block-container position="absolute">
@@ -116,13 +116,13 @@
 			</fo:page-sequence>
 		</fo:root>
 	</xsl:template>
-        
+
 	<xsl:template match="ReportData" >
 
 		<xsl:for-each select="Table">
                     <fo:block font-size="10pt" margin-top="1.5cm">
 						<fo:table width="100%" table-layout="fixed" >
-							<fo:table-column 
+							<fo:table-column
 								column-width="20cm" />
 							<fo:table-body background-color="{TableHeaderColor}">
 								<fo:table-row>
@@ -166,7 +166,7 @@
 				<fo:block break-after="page" />
 			</xsl:if>
 		</xsl:for-each>
-                
+
                 <xsl:if test="ExceptionPage = 'show'">
                     <fo:block font-size="10pt" >
                         <fo:block break-after="page" />
@@ -185,11 +185,11 @@
                                     </fo:table-cell>
                                 </fo:table-row>
                             </fo:table-body>
-                        </fo:table>      
+                        </fo:table>
                     </fo:block>
-                     
+
                     <xsl:for-each select="ExceptionMeta">
-                        <fo:block id="{ErrorCode}" 
+                        <fo:block id="{ErrorCode}"
                          font-family="Arial, Helvetica, Gyosho, Trado, sans-serif"
                          padding-top="1.5%" padding-bottom="1.3%" font-size="10pt"
                          text-align="left" margin-left=".2mm" margin-right="3.6mm" border=".5pt"
@@ -207,7 +207,7 @@
                 </xsl:if>
 	</xsl:template>
 	<xsl:template match="ColumnHeader">
-		<fo:table-cell border-bottom-color="black" background-color="{ColorCode}" 
+		<fo:table-cell border-bottom-color="black" background-color="{ColorCode}"
 			border-top-color="black" border-right-color="black" display-align="center"
 			padding-top="1.5%" padding-bottom="1.3%" border-bottom-width=".5pt"
 			border-top-width=".5pt" border-top-style="solid" border-bottom-style="solid">
@@ -232,7 +232,7 @@
 		</xsl:if>
 	</xsl:template>
 	<xsl:template match="RowMeta">
-            
+
             <xsl:if test="TableName = 'Statistics'">
                 <fo:table-cell border-bottom-width=".5pt"
                                border-bottom-style="solid" border-bottom-color="black" padding="1mm" margin-left="2mm">
@@ -243,7 +243,7 @@
                     </fo:block>
                 </fo:table-cell>
             </xsl:if>
-                
+
             <xsl:if test="TableName != 'Statistics'">
                 <xsl:if test="SHOW_COLUMN_TIME = 'show'">
                     <fo:table-cell border-bottom-width=".5pt"
@@ -256,9 +256,9 @@
                     </fo:table-cell>
                 </xsl:if>
             </xsl:if>
-            
-            
-            
+
+
+
             <xsl:if test="TableName = 'Statistics'">
                 <fo:table-cell border-bottom-width=".5pt"
                                border-bottom-style="solid" border-bottom-color="black" padding="1mm" margin-left="2mm">
@@ -269,7 +269,7 @@
                     </fo:block>
                 </fo:table-cell>
             </xsl:if>
-                
+
             <xsl:if test="TableName != 'Statistics'">
                 <xsl:if test="SHOW_COLUMN_TEST_NAME = 'show'">
                     <fo:table-cell border-bottom-width=".5pt"
@@ -282,8 +282,8 @@
                     </fo:table-cell>
                 </xsl:if>
             </xsl:if>
-                
-             
+
+
             <xsl:if test="TableName = 'Statistics'">
                 <fo:table-cell border-bottom-width=".5pt"
                                border-bottom-style="solid" border-bottom-color="black" padding="1mm" margin-left="2mm">
@@ -294,7 +294,7 @@
                     </fo:block>
                 </fo:table-cell>
             </xsl:if>
-                
+
             <xsl:if test="TableName != 'Statistics'">
                 <xsl:if test="SHOW_COLUMN_TEST_CASE = 'show'">
                     <fo:table-cell border-bottom-width=".5pt"
@@ -307,8 +307,8 @@
                     </fo:table-cell>
                 </xsl:if>
             </xsl:if>
-            
-            
+
+
             <xsl:if test="TableName = 'Statistics'">
                 <fo:table-cell border-bottom-width=".5pt"
                                border-bottom-style="solid" border-bottom-color="black" padding="1mm" margin-left="2mm">
@@ -319,7 +319,7 @@
                     </fo:block>
                 </fo:table-cell>
             </xsl:if>
-                
+
             <xsl:if test="TableName != 'Statistics'">
                 <xsl:if test="SHOW_COLUMN_TIME_TAKEN = 'show'">
                     <fo:table-cell border-bottom-width=".5pt"
@@ -332,7 +332,7 @@
                     </fo:table-cell>
                 </xsl:if>
             </xsl:if>
- 
+
             <xsl:if test="TableName != 'Statistics'">
                     <xsl:if test="SHOW_COLUMN_DESCRIPTION = 'show'">
                         <fo:table-cell border-bottom-width=".5pt"
@@ -344,28 +344,23 @@
                             </fo:block>
                         </fo:table-cell>
                     </xsl:if>
-            </xsl:if>           
-                
-                <xsl:if test="ExceptionPage = 'show'">
-                    <xsl:if test="STATUS='FAILED'">
-                        <fo:table-cell border-bottom-width=".5pt"
-                                   border-bottom-style="solid" border-bottom-color="black" padding="1mm" margin-left="2mm">
-                            <fo:block font-size="7.5pt"
-                                                  font-family="Arial, Helvetica, Gyosho, Trado, sans-serif"
-                                                  font-style="italic" text-align="left">
-                                <fo:basic-link internal-destination="{BLOCKID}" show-destination="new">
-                                    <fo:external-graphic content-height="scale-to-fit" height="12pt" margin-right="2mm"  content-width="25pt"  src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACABAMAAAAxEHz4AAAAMFBMVEUAAAD///+cpLDIzNPT19yRmqj09fa9wst7hpYAAAAAAAAAAAAAAAAAAAAAAAAAAABeYK5aAAAAAXRSTlMAQObYZgAAARhJREFUeNpjYBgFo2AUjIJRAAOMuCQE0fjvcahjotQFA28AWhgwGd0loMHo7gM8LmCNJ6Sf4dy3ABQ+MwovfwVhN/97/hWnF1h5iPK2/QZcXmAkLtwEcOpR/EBcwL/D5QIBMmKOYgMY0dM/LM03TkDRxP4CoYb1FTEpsQ2VG4HE/k1UUv6ZgMxjm0B6XpiejEgfZpnEBYggnnyPS80wKA9GDRg1AARYiKsZcdeOwzcM3o+mg9F0MJoORtPBaDoYTQej6WA0HYzkdDBqwKgBGHnB4AL2kgANMON0AXFDKAz/aWfAU+IM8MNpwH/iDPiA04DfCcToZ9uAOxqnBBDWz2qJewiEiOFAVl204cBRMApGwSgYBaMAGQAAyJ4yiurAIEIAAAAASUVORK5CYII="/>
-                                </fo:basic-link>
-                                <xsl:if test="SHOW_SCREEN_SHOT_LINK = 'show'">
-                                    <fo:basic-link external-destination="{FAILED_SCREEN_SHOT_LOCATION}//{BLOCKID}.png" show-destination="new">
-                                        <fo:external-graphic content-height="scale-to-fit" height="15pt" margin-right="2mm"  content-width="25pt" src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACABAMAAAAxEHz4AAAAMFBMVEUAAACcpLDIzNPT19z///+Rmqj09fa9wst7hpbe4eVwe42nrrmyuMKGkJ/p6+5lcYXfCGFQAAAAAXRSTlMAQObYZgAAAedJREFUeNpjYBgFo2AUjIJRMAoQgBGNq6RIQMO7ex/wGMAa/4CglUxcG1C4KJL5hPUz/PuOwmVGcQAHMb7+r3cDlwsYiQs3AZxe4CPOgIc4DRAgI+YoNoAF3YA9BHS7oAU8ExmJ7x+lBjCMGjBSDeAoNm+gyICci7zHKTGA/QIDw98CCgyoBRE3KDAAXBD/p8CAAyDiz0BGowNG2UOiAQK4y2ziDGgGERoUGPDTAFgSTqAkEKfoB1til2EhzoAfvSOzPODabHyWEgO4tCYKlr+lwAAvUPILLyDbAB5IW+om2QZ4QKjfBWQawAVrzF0k0wB46cHcQJ4BfXDWA7IMYEc0Jl+SZYAvgkkgGJnwByEIXCXDAJQCmHEB6Qb0obSpHCB0u1EAsQawo7THGZIhSXOv0M8PRBrgi9awBJuXgT08mQgFIQjMhdav2KKUiVAQggtlYDDmgqP0AFEG9GE0TT8wcF4As3qJMQAtCEFgE0M31C3EGOCLxaM7oYb+UyBsABeWuII5gIFBl7ABf/BXcoQN6CO+qY/VACxBSFpm8qW0Yvkw2tgeNWDUAMoNIDIj/R/EBnwizgB5nAb8J86ADzgN+G1AjH5mPGNpExWIiDdO3GNCRAwHMr2594FhFIyCUTAKRsEowAUAuqVjKkMvEHEAAAAASUVORK5CYII="/>
-                                    </fo:basic-link>
-                                </xsl:if>
-                            </fo:block>
-                        </fo:table-cell>
+            </xsl:if>
+            <fo:table-cell border-bottom-width=".5pt"
+                       border-bottom-style="solid" border-bottom-color="black" padding="1mm" margin-left="2mm">
+                <fo:block font-size="7.5pt"
+                                      font-family="Arial, Helvetica, Gyosho, Trado, sans-serif"
+                                      font-style="italic" text-align="left">
+                    <fo:basic-link internal-destination="{BLOCKID}" show-destination="new">
+                        <fo:external-graphic content-height="scale-to-fit" height="12pt" margin-right="2mm"  content-width="25pt"  src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACABAMAAAAxEHz4AAAAMFBMVEUAAAD///+cpLDIzNPT19yRmqj09fa9wst7hpYAAAAAAAAAAAAAAAAAAAAAAAAAAABeYK5aAAAAAXRSTlMAQObYZgAAARhJREFUeNpjYBgFo2AUjIJRAAOMuCQE0fjvcahjotQFA28AWhgwGd0loMHo7gM8LmCNJ6Sf4dy3ABQ+MwovfwVhN/97/hWnF1h5iPK2/QZcXmAkLtwEcOpR/EBcwL/D5QIBMmKOYgMY0dM/LM03TkDRxP4CoYb1FTEpsQ2VG4HE/k1UUv6ZgMxjm0B6XpiejEgfZpnEBYggnnyPS80wKA9GDRg1AARYiKsZcdeOwzcM3o+mg9F0MJoORtPBaDoYTQej6WA0HYzkdDBqwKgBGHnB4AL2kgANMON0AXFDKAz/aWfAU+IM8MNpwH/iDPiA04DfCcToZ9uAOxqnBBDWz2qJewiEiOFAVl204cBRMApGwSgYBaMAGQAAyJ4yiurAIEIAAAAASUVORK5CYII="/>
+                    </fo:basic-link>
+                    <xsl:if test="SHOW_SCREEN_SHOT_LINK = 'show'">
+                        <fo:basic-link external-destination="{FAILED_SCREEN_SHOT_LOCATION}//{BLOCKID}.png" show-destination="new">
+                            <fo:external-graphic content-height="scale-to-fit" height="15pt" margin-right="2mm"  content-width="25pt" src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACABAMAAAAxEHz4AAAAMFBMVEUAAACcpLDIzNPT19z///+Rmqj09fa9wst7hpbe4eVwe42nrrmyuMKGkJ/p6+5lcYXfCGFQAAAAAXRSTlMAQObYZgAAAedJREFUeNpjYBgFo2AUjIJRMAoQgBGNq6RIQMO7ex/wGMAa/4CglUxcG1C4KJL5hPUz/PuOwmVGcQAHMb7+r3cDlwsYiQs3AZxe4CPOgIc4DRAgI+YoNoAF3YA9BHS7oAU8ExmJ7x+lBjCMGjBSDeAoNm+gyICci7zHKTGA/QIDw98CCgyoBRE3KDAAXBD/p8CAAyDiz0BGowNG2UOiAQK4y2ziDGgGERoUGPDTAFgSTqAkEKfoB1til2EhzoAfvSOzPODabHyWEgO4tCYKlr+lwAAvUPILLyDbAB5IW+om2QZ4QKjfBWQawAVrzF0k0wB46cHcQJ4BfXDWA7IMYEc0Jl+SZYAvgkkgGJnwByEIXCXDAJQCmHEB6Qb0obSpHCB0u1EAsQawo7THGZIhSXOv0M8PRBrgi9awBJuXgT08mQgFIQjMhdav2KKUiVAQggtlYDDmgqP0AFEG9GE0TT8wcF4As3qJMQAtCEFgE0M31C3EGOCLxaM7oYb+UyBsABeWuII5gIFBl7ABf/BXcoQN6CO+qY/VACxBSFpm8qW0Yvkw2tgeNWDUAMoNIDIj/R/EBnwizgB5nAb8J86ADzgN+G1AjH5mPGNpExWIiDdO3GNCRAwHMr2594FhFIyCUTAKRsEowAUAuqVjKkMvEHEAAAAASUVORK5CYII="/>
+                        </fo:basic-link>
                     </xsl:if>
-                </xsl:if>
+                </fo:block>
+            </fo:table-cell>
 	</xsl:template>
-        
-        
+
+
 </xsl:stylesheet>
